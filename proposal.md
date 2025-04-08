@@ -1,7 +1,7 @@
 # Anya Forger Dress Up Game Proposal
 
 ## Repository
-<Link to your project's public GitHub respository>
+https://github.com/Juloka/AnyaForgerDressUp.git
 
 ## Description
 A very simple dress up game featuring Anya Forger from SpyXFamily. This is relevant to media and digital arts because this will bring together art and fashion.
