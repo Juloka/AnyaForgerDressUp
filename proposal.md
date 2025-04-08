@@ -1,4 +1,4 @@
-# Anya Forger Dress Up Game
+# Anya Forger Dress Up Game Proposal
 
 ## Repository
 <Link to your project's public GitHub respository>
