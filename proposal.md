@@ -36,6 +36,6 @@ Minimal Viable Outcome:
   1. Goal 1 = One or all category "bottons" fully work
   2. Goal 2 = Add as much option "buttons" as I can
 
-- Week # (Final)
+- Week 3 (Final)
   1. Goal 1 = Continue to add option "buttons"
   3. Goal 2 = Add a download button, if I can
