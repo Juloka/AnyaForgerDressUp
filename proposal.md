@@ -9,10 +9,10 @@ A very simple dress up game featuring Anya Forger from SpyXFamily. This is relev
 ## Features
 - Feature 1: Categories
 	- Every dress up game has many catagories of clothing/makeup for the model to where. I plan on excuting the cataegories by coding the "buttons" to open up the options under the catgories.
-- Feature 2: 
-	- 
-- Feature N 
-	- Short explaination of how it will be executed.
+- Feature 2: Options
+	- Every dress up game also has many options of clothing/makeup to choose from. I plan on excuting the options by coding the "buttons" to open up the art on the model.
+- Feature 3: Save Outfit
+	- Most dress up games also hae the opyion to save your outfit to the computer as a jpg or png. I plan on excuting this save option by coding the save "button" to save the model on the computer as a jpg or png.
 
 ## Challenges
 - Short sentence of any skill or topic that needs to be learnt or researched.
