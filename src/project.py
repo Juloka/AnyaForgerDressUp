@@ -32,7 +32,12 @@ character_base = load_image('AnyaBase.png', CHARACTER_SIZE)
 # Load clothing items
 clothing_images = {}
 # Categories and their options
-
+categories = {
+    "Hair": ["Normal", "School", "Bun", "Winter"],
+    "Face": ["WakuWaku", "Determined", "Shocked", "Smuge"],
+    "Clothes": ["School", "Blue", "Red", "Winter"],
+    "Shoes": ["School", "Blue", "Red", "Winter"]
+}
 # Function to loading clothing images
 
 # For category selection buttons
