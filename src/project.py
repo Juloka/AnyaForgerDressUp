@@ -30,7 +30,7 @@ def load_image(path, scale=None):
 CHARACTER_SIZE = (WINDOW_SIZE, WINDOW_SIZE)
 character_base = load_image('AnyaBase.png', CHARACTER_SIZE)
 # Load clothing items
-
+clothing_images = {}
 # Categories and their options
 
 # Function to loading clothing images
