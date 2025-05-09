@@ -14,7 +14,12 @@ SELECT_GREEN = (100, 150, 255)
 screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
 pygame. display.set_caption("Anya Forger Dress Up Game")
 # Load background image
-
+background_image = None
+try:
+    background_image = pygame.load('AnyaBG.png')
+    background_image = pygame.transform.scale(background_image, (WINDOW_SIZE, WINDOW_SIZE))
+except pygame.error as e:
+    print(f"Could not load background image: {e}")
 # Function to load an image with error handling
 
 # Load character base
