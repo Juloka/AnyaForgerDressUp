@@ -80,7 +80,7 @@ download_button_height = 60
 # Show the base and selected clothing items onto the surface
 
 # Create a filename (dressed_anya.png)
-
+filename = "dressed_anya.png"
 # Save the surface to a PNG file
 
 # Main game loop
