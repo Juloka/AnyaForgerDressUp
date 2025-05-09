@@ -110,7 +110,13 @@ download_button_x = WINDOW_SIZE // 2 - download_button_width // 2
 download_button_y = WINDOW_SIZE - 120
 download_button = Button(download_button_x, download_button_y, download_button_width, download_button_height, "Download Image", GREEN, LIGHT_GREEN)
 # Function to update option buttons based on active category
-
+def update_option_buttons():
+    for category in categories:
+        for i, button in enumerate(option_buttons[category]):
+            if current_selections[category] == i:
+                button.is_selected = True
+            else:
+                button.is_selected = False
 # Create a character preview with clothing items
 
 # Create a the correct colthing order: Shoes, Clothes, Face, Hair
