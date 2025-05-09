@@ -1,5 +1,5 @@
 import pygame
-
+import sys
 # Initialize pygame
 pygame.init()
 # Window size & colors
@@ -65,6 +65,18 @@ class Button:
         self.hover_color = hover_color
         self.is_hovered = False
         self.is_selected = False
+    
+    def draw(self, surface):
+        color = self.hover_color if self.is_hovered else self.color
+        pygame.draw.rect(surface, DARK_GREEN, self.rect, 0)
+        pygame.draw.rect(surface, color, pygame.Rect(self.rect.x + 2, self.rect.y + 2, self.rect.width - 4, self.rect.height - 4))
+        if self.is_selected:
+            pygame.draw.rect(surface, SELECT_GREEN, pygame.Rect(self.rect.x + 5, self.rect.y + 5, self.rect.width - 10, self.rect.height - 10), 2)
+        font = pygame.font,SysFont(None, 30)
+        text_surface = font.render(self.text, True, BLACK)
+        text_rect = text_surface,get_rect(center=self.rect.center)
+        surface.blit(text_surface, text_rect)
+        
 # Create category buttons on the left side
 category_buttons = {}
 category_button_width = 250
