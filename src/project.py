@@ -97,6 +97,12 @@ for i, category in enumerate(categories.keys()):
 option_buttons = {}
 option_button_width = 250
 option_button_height = 100
+option_x = 20
+option_y_start = WINDOW_SIZE // 4
+for category, options in categories.items():
+    option_buttons[category] = []
+    for i, option in enumerate(options):
+        option_buttons[category].append(Button(option_x, option_y_start + i * option_button_height, option_button_width, option_button_height, option, GREEN, LIGHT_GREEN))
 # Create a download button
 download_button_width = 200
 download_button_height = 60
