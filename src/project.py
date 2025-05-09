@@ -58,6 +58,13 @@ def load_clothing_images():
 
 # Create a button class
 class Button:
+    def __init__(self, x, y, width, height, text, color, hover_color):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.text = text
+        self.color = color
+        self.hover_color = hover_color
+        self.is_hovered = False
+        self.is_selected = False
 # Create category buttons on the left side
 category_buttons = {}
 category_button_width = 250
