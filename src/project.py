@@ -39,7 +39,15 @@ categories = {
     "Shoes": ["School", "Blue", "Red", "Winter"]
 }
 # Function to loading clothing images
-
+def load_clothing_images():
+    global clothing_images
+    clothing_images = {}
+    for category, options in categories.items():
+        clothing_images[category] = []
+        for option in options:
+            filename = f"{category}/{option.lower().replace('', '_')}.png"
+            image = load_image(filename, CHARACTER_SIZE)
+            clothing_images[category].append(image)
 # For category selection buttons
 
 # Initial selections
@@ -49,13 +57,18 @@ categories = {
 # Keep track of which catagory is active
 
 # Create a button class
-
+class Button:
 # Create category buttons on the left side
-
+category_buttons = {}
+category_button_width = 250
+category_button_height = 100
 # Create option buttons on the right size
-
+option_buttons = {}
+option_button_width = 250
+option_button_height = 100
 # Create a download button
-
+download_button_width = 200
+download_button_height = 60
 # Function to update option buttons based on active category
 
 # Create a character preview with clothing items
