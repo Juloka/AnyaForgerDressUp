@@ -21,9 +21,14 @@ try:
 except pygame.error as e:
     print(f"Could not load background image: {e}")
 # Function to load an image with error handling
-
+def load_image(path, scale=None):
+    image = pygame.image.load(path)
+    if scale is not None:
+        image = pygame.transform.scale(image, scale)
+    return image
 # Load character base
-
+CHARACTER_SIZE = (WINDOW_SIZE, WINDOW_SIZE)
+character_base = load_image('AnyaBase.png', CHARACTER_SIZE)
 # Load clothing items
 
 # Categories and their options
