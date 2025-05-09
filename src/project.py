@@ -106,6 +106,9 @@ for category, options in categories.items():
 # Create a download button
 download_button_width = 200
 download_button_height = 60
+download_button_x = WINDOW_SIZE // 2 - download_button_width // 2
+download_button_y = WINDOW_SIZE - 120
+download_button = Button(download_button_x, download_button_y, download_button_width, download_button_height, "Download Image", GREEN, LIGHT_GREEN)
 # Function to update option buttons based on active category
 
 # Create a character preview with clothing items
