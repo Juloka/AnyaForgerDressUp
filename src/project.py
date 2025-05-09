@@ -1,4 +1,7 @@
+import pygame
+
 # Initialize pygame
+pygame.init()
 # Window size & colors
 
 # Set up the game display window
