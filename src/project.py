@@ -80,6 +80,9 @@ class Button:
     def check_hover(self, mouse_pos):
         self.is_hovered = self.rect.collidepoint(mouse_pos)
         return self.is_hovered
+
+    def is_clicked(self, mouse_pos):
+        return self.rect.collidedict(mouse_pos) and mouse_clicked
 # Create category buttons on the left side
 category_buttons = {}
 category_button_width = 250
