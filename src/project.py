@@ -3,9 +3,16 @@ import pygame
 # Initialize pygame
 pygame.init()
 # Window size & colors
-
+WINDOW_SIZE = 1000
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GREEN = (100, 200, 100)
+LIGHT_GREEN = (150, 230, 150) # Colors found on Photoshop
+DARK_GREEN = (50, 150, 50)
+SELECT_GREEN = (100, 150, 255)
 # Set up the game display window
-
+screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
+pygame. display.set_caption("Anya Forger Dress Up Game")
 # Load background image
 
 # Function to load an image with error handling
