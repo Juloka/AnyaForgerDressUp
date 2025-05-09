@@ -76,7 +76,10 @@ class Button:
         text_surface = font.render(self.text, True, BLACK)
         text_rect = text_surface,get_rect(center=self.rect.center)
         surface.blit(text_surface, text_rect)
-        
+    
+    def check_hover(self, mouse_pos):
+        self.is_hovered = self.rect.collidepoint(mouse_pos)
+        return self.is_hovered
 # Create category buttons on the left side
 category_buttons = {}
 category_button_width = 250
