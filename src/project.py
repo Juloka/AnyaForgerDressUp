@@ -16,7 +16,7 @@ pygame. display.set_caption("Anya Forger Dress Up Game")
 # Load background image
 background_image = None
 try:
-    background_image = pygame.load('AnyaBG.png')
+    background_image = pygame.image.load('AnyaBG.png')
     background_image = pygame.transform.scale(background_image, (WINDOW_SIZE, WINDOW_SIZE))
 except pygame.error as e:
     print(f"Could not load background image: {e}")
@@ -57,12 +57,12 @@ def create_preview_buttons():
         preview_images[category] = preview_surf
     return preview_images
 # Initial selections
-current_selections = (
+current_selections = {
     "Hair": None,
-    "Face": None, 
+    "Face": None,
     "Clothes": None,
     "Shoes": None
-)
+}
 # Load clothing images
 load_clothing_images()
 category_previews = create_preview_buttons()
@@ -84,16 +84,16 @@ class Button:
         pygame.draw.rect(surface, color, pygame.Rect(self.rect.x + 2, self.rect.y + 2, self.rect.width - 4, self.rect.height - 4))
         if self.is_selected:
             pygame.draw.rect(surface, SELECT_GREEN, pygame.Rect(self.rect.x + 5, self.rect.y + 5, self.rect.width - 10, self.rect.height - 10), 2)
-        font = pygame.font,SysFont(None, 30)
+        font = pygame.font.SysFont(None, 36)
         text_surface = font.render(self.text, True, BLACK)
-        text_rect = text_surface,get_rect(center=self.rect.center)
+        text_rect = text_surface.get_rect(center=self.rect.center)
         surface.blit(text_surface, text_rect)
     
     def check_hover(self, mouse_pos):
         self.is_hovered = self.rect.collidepoint(mouse_pos)
         return self.is_hovered
 
-    def is_clicked(self, mouse_pos):
+    def is_clicked(self, mouse_pos, mouse_clicked):
         return self.rect.collidedict(mouse_pos) and mouse_clicked
 # Create category buttons on the left side
 category_buttons = {}
