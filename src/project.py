@@ -181,7 +181,10 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 mouse_clicked = True
         # Place the background
-        
+        if background_image:
+            screen.blit(background_image, (0, 0))
+        else:
+            screen.fill(WHITE)
         # Check for the download button
 
         # Check for the category button interactions
