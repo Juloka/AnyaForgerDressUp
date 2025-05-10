@@ -172,7 +172,7 @@ def save_dressed_character():
 # Main game loop
 def main():
     global active_category
-    clock = pygame.time.clock()
+    clock = pygame.time.Clock()
     # Load images before the main loop
     load_clothing_images()
     category_previews = create_preview_buttons()
