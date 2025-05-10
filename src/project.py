@@ -82,7 +82,7 @@ class Button:
         self.hover_color = hover_color
         self.is_hovered = False
         self.is_selected = False
-    
+
     def draw(self, surface):
         color = self.hover_color if self.is_hovered else self.color
         pygame.draw.rect(surface, DARK_GREEN, self.rect, 0)
@@ -93,13 +93,13 @@ class Button:
         text_surface = font.render(self.text, True, BLACK)
         text_rect = text_surface.get_rect(center=self.rect.center)
         surface.blit(text_surface, text_rect)
-    
+
     def check_hover(self, mouse_pos):
         self.is_hovered = self.rect.collidepoint(mouse_pos)
         return self.is_hovered
 
     def is_clicked(self, mouse_pos, mouse_clicked):
-        return self.rect.collidedict(mouse_pos) and mouse_clicked
+        return self.rect.collidepoint(mouse_pos) and mouse_clicked
 # Create category buttons on the left side
 category_buttons = {}
 category_button_width = 250
@@ -211,14 +211,15 @@ def main():
         draw_character()
         for button in category_buttons.values():
             button.draw(screen)
-        for button in option_buttons.values():
-            button.draw(screen)
+        if active_category in option_buttons:
+            for button in option_buttons[active_category]:
+                button.draw(screen)
         download_button.draw(screen)
         font = pygame.font.SysFont(None, 48)
         title_surface = font.render(f"Select {active_category}", True, BLACK)
         screen.blit(title_surface, (WINDOW_SIZE - 350, 20))
         instructions_font = pygame.font.SysFont(None, 36)
-        instructions = "Help Anaya create an outfit! Choose a category on the right and then select an option on the left."
+        instructions = "Help Anaya get dresses! Choose a category on the right and then select an option on the left."
         instructions_surface = instructions_font.render(instructions, True, BLACK)
         screen.blit(instructions_surface, (WINDOW_SIZE // 2 - instructions_surface.get_width() // 2, WINDOW_SIZE - 50))
 
