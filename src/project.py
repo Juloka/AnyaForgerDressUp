@@ -64,9 +64,10 @@ current_selections = (
     "Shoes": None
 )
 # Load clothing images
-
+load_clothing_images()
+category_previews = create_preview_buttons()
 # Keep track of which catagory is active
-
+active_category = "Hair"
 # Create a button class
 class Button:
     def __init__(self, x, y, width, height, text, color, hover_color):
