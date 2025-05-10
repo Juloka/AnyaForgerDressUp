@@ -120,8 +120,9 @@ def update_option_buttons():
 # Create a character preview with clothing items
 def draw_character():
     screen.blit(character_base, (0, 0))
-# Create a the correct colthing order: Shoes, Clothes, Face, Hair
-
+    # Draw in the correct colthing order: Shoes, Clothes, Face, Hair
+    if current_selections["Shoes"] is not None:
+        screen.blit(clothing_images["Shoes"][current_selections["Shoes"]], (0, 0))
 # Create a new surface with the same size as the character
 
 # Show the base and selected clothing items onto the surface
