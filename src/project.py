@@ -171,17 +171,25 @@ def main():
     # Load images before the main loop
     load_clothing_images()
     category_previews = create_preview_buttons()
-    # Place the background
     while True:
+        mouse_pos = pygame.mouse.get_pos()
+        mouse_clicked = False
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                mouse_clicked = True
+        # Place the background
         
-    # Check for the download button
+        # Check for the download button
 
-    # Check for the category button interactions
+        # Check for the category button interactions
 
-    # Check for option button interactions (only for active category)
+        # Check for option button interactions (only for active category)
 
-    # Draw character preview, category buttons (left side), option buttons
-    # (right side), download button, title for options, and instructions
+        # Draw character preview, category buttons (left side), option buttons
+        # (right side), download button, title for options, and instructions
 
 if __name__ == "main":
     main()
