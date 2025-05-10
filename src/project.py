@@ -50,7 +50,12 @@ def load_clothing_images():
             clothing_images[category].append(image)
 # For category selection buttons
 def create_preview_buttons():
-    
+    preview_images = {}
+    for category, options in categories.items():
+        preview_size = 80
+        preview_surf = pygame.Surface((preview_size, preview_size), pygame.SRCALPHA)
+        preview_images[category] = preview_surf
+    return preview_images
 # Initial selections
 
 # Load clothing images
