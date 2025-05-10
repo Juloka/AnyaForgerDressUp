@@ -186,7 +186,8 @@ def main():
         else:
             screen.fill(WHITE)
         # Check for the download button
-
+        if download_button.is_clicked(mouse_pos, mouse_clicked):
+            save_dressed_character()
         # Check for the category button interactions
 
         # Check for option button interactions (only for active category)
