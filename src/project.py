@@ -196,7 +196,11 @@ def main():
                 for c, b in category_buttons.items():
                     b.is_selected = (c == active_category)
         # Check for option button interactions (only for active category)
-
+        for i, button in enumerate(option_buttons[active_category]):
+            button.check_hover(mouse_pos)
+            if button.is_clicked(mouse_pos, mouse_clicked):
+                current_selections[active_category] = 1
+                update_option_buttons()
         # Draw character preview, category buttons (left side), option buttons
         # (right side), download button, title for options, and instructions
 
