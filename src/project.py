@@ -123,6 +123,12 @@ def draw_character():
     # Draw in the correct colthing order: Shoes, Clothes, Face, Hair
     if current_selections["Shoes"] is not None:
         screen.blit(clothing_images["Shoes"][current_selections["Shoes"]], (0, 0))
+    if current_selections["Clothes"] is not None:
+        screen.blit(clothing_images["Clothes"][current_selections["Clothes"]], (0, 0))
+    if current_selections["Face"] is not None:
+        screen.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
+    if current_selections["Hair"] is not None:
+        screen.blit(clothing_images["Hair"][current_selections["Hair"]], (0, 0))
 # Create a new surface with the same size as the character
 
 # Show the base and selected clothing items onto the surface
