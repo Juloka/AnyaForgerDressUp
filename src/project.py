@@ -203,6 +203,12 @@ def main():
                 update_option_buttons()
         # Draw character preview, category buttons (left side), option buttons
         # (right side), download button, title for options, and instructions
+        draw_character()
+        for button in category_buttons.values():
+            button.draw(screen)
+        for button in option_buttons.values():
+            button.draw(screen)
+        download_button.draw(screen)
 
 if __name__ == "main":
     main()
