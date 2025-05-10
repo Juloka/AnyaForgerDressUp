@@ -143,9 +143,14 @@ def save_dressed_character():
         character_surface.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
     if current_selections["Face"] is not None:
         character_surface.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
-# Create a filename (dressed_anya.png)
-filename = "dressed_anya.png"
-# Save the surface to a PNG file
+    # Create a filename (dressed_anya.png)
+    filename = "dressed_anya.png"
+    # Save the surface to a PNG file
+    try:
+        pygame.image.save(character_surface, filename)
+        print(f"Character saved as {filename}")
+    except pygame.error as e:
+        print(f"Error saving image: {e}")
 
 # Main game loop
 def main():
