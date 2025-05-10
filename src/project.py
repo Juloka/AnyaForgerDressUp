@@ -133,8 +133,16 @@ def draw_character():
 def save_dressed_character():
     # Create a new surface with the same size as the character
     character_surface = pygame.Surface(CHARACTER_SIZE, pygame.SRCALPHA)
-# Show the base and selected clothing items onto the surface
-
+    # Show the base and selected clothing items onto the surface
+    character_surface.blit(character_base, (0,0))
+    if current_selections["Shoes"] is not None:
+        character_surface.blit(clothing_images["Shoes"][current_selections["Shoes"]], (0, 0))
+    if current_selections["Clothes"] is not None:
+        character_surface.blit(clothing_images["Clothes"][current_selections["Clothes"]], (0, 0))
+    if current_selections["Face"] is not None:
+        character_surface.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
+    if current_selections["Face"] is not None:
+        character_surface.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
 # Create a filename (dressed_anya.png)
 filename = "dressed_anya.png"
 # Save the surface to a PNG file
