@@ -129,8 +129,10 @@ def draw_character():
         screen.blit(clothing_images["Face"][current_selections["Face"]], (0, 0))
     if current_selections["Hair"] is not None:
         screen.blit(clothing_images["Hair"][current_selections["Hair"]], (0, 0))
-# Create a new surface with the same size as the character
 
+def save_dressed_character():
+    # Create a new surface with the same size as the character
+    character_surface = pygame.Surface(CHARACTER_SIZE, pygame.SRCALPHA)
 # Show the base and selected clothing items onto the surface
 
 # Create a filename (dressed_anya.png)
