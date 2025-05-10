@@ -154,7 +154,8 @@ def save_dressed_character():
 
 # Main game loop
 def main():
-
+    global active_category
+    clock = pygame.time.clock()
 # Load images before the main loop
 
 # Place the background
