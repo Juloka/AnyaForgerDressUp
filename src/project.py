@@ -28,7 +28,7 @@ def load_image(path, scale=None):
             image = pygame.transform.scale(image, scale)
         return image
     except pygame.error as e:
-        surf = pyagem.Surface((100, 100))
+        surf = pygame.Surface((100, 100))
         surf.fill((255, 0, 255))
         return surf
 # Load character base
@@ -50,7 +50,7 @@ def load_clothing_images():
     for category, options in categories.items():
         clothing_images[category] = []
         for option in options:
-            filename = f"{category}/{option.lower().replace('', '_')}.png"
+            filename = f"{category}/{option.lower()}.png"
             image = load_image(filename, CHARACTER_SIZE)
             clothing_images[category].append(image)
 # For category selection buttons
@@ -225,5 +225,5 @@ def main():
         pygame.display.flip()
         clock.tick(60)
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
