@@ -212,6 +212,13 @@ def main():
         font = pygame.font.SysFont(None, 48)
         title_surface = font.render(f"Select {active_category}", True, BLACK)
         screen.blit(title_surface, (WINDOW_SIZE - 350, 20))
+        instructions_font = pygame.font.SysFont(None, 36)
+        instructions = "Help Anaya create an outfit! Choose a category on the right and then select an option on the left."
+        instructions_surface = instructions_font.render(instructions, True, BLACK)
+        screen.blit(instructions_surface, (WINDOW_SIZE // 2 - instructions_surface.get_width() // 2, WINDOW_SIZE - 50))
+
+        pygame.display.flip()
+        clock.tick(60)
 
 if __name__ == "main":
     main()
