@@ -57,7 +57,12 @@ def create_preview_buttons():
         preview_images[category] = preview_surf
     return preview_images
 # Initial selections
-
+current_selections = (
+    "Hair": None,
+    "Face": None, 
+    "Clothes": None,
+    "Shoes": None
+)
 # Load clothing images
 
 # Keep track of which catagory is active
