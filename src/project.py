@@ -49,7 +49,8 @@ def load_clothing_images():
             image = load_image(filename, CHARACTER_SIZE)
             clothing_images[category].append(image)
 # For category selection buttons
-
+def create_preview_buttons():
+    
 # Initial selections
 
 # Load clothing images
@@ -156,18 +157,18 @@ def save_dressed_character():
 def main():
     global active_category
     clock = pygame.time.clock()
-# Load images before the main loop
+    # Load images before the main loop
+    loading_clothing_images()
+    # Place the background
 
-# Place the background
+    # Check for the download button
 
-# Check for the download button
+    # Check for the category button interactions
 
-# Check for the category button interactions
+    # Check for option button interactions (only for active category)
 
-# Check for option button interactions (only for active category)
-
-# Draw character preview, category buttons (left side), option buttons
-# (right side), download button, title for options, and instructions
+    # Draw character preview, category buttons (left side), option buttons
+    # (right side), download button, title for options, and instructions
 
 if __name__ == "main":
     main()
