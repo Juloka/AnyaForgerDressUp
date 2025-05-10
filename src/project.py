@@ -169,9 +169,11 @@ def main():
     global active_category
     clock = pygame.time.clock()
     # Load images before the main loop
-    loading_clothing_images()
+    load_clothing_images()
+    category_previews = create_preview_buttons()
     # Place the background
-
+    while True:
+        
     # Check for the download button
 
     # Check for the category button interactions
