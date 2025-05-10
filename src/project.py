@@ -189,7 +189,12 @@ def main():
         if download_button.is_clicked(mouse_pos, mouse_clicked):
             save_dressed_character()
         # Check for the category button interactions
-
+        for category, button in category_buttons.items():
+            button.check_hover(mouse_pos)
+            if button.is_clicked(mouse_pos, mouse_clicked):
+                active_category = category
+                for c, b in category_buttons.items():
+                    b.is_selected = (c == active_category)
         # Check for option button interactions (only for active category)
 
         # Draw character preview, category buttons (left side), option buttons
