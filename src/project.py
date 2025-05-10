@@ -201,11 +201,12 @@ def main():
                 for c, b in category_buttons.items():
                     b.is_selected = (c == active_category)
         # Check for option button interactions (only for active category)
-        for i, button in enumerate(option_buttons[active_category]):
-            button.check_hover(mouse_pos)
-            if button.is_clicked(mouse_pos, mouse_clicked):
-                current_selections[active_category] = 1
-                update_option_buttons()
+        if active_category in option_buttons:
+            for i, button in enumerate(option_buttons[active_category]):
+                button.check_hover(mouse_pos)
+                if button.is_clicked(mouse_pos, mouse_clicked):
+                    current_selections[active_category] = i
+                    update_option_buttons()
         # Draw character preview, category buttons (left side), option buttons
         # (right side), download button, title for options, and instructions
         draw_character()
@@ -218,9 +219,9 @@ def main():
         font = pygame.font.SysFont(None, 48)
         title_surface = font.render(f"Select {active_category}", True, BLACK)
         screen.blit(title_surface, (WINDOW_SIZE - 350, 20))
-        instructions_font = pygame.font.SysFont(None, 36)
-        instructions = "Help Anaya get dresses! Choose a category on the right and then select an option on the left."
-        instructions_surface = instructions_font.render(instructions, True, BLACK)
+        instructions_font = pygame.font.SysFont(None, 30)
+        instructions = "Help Anya get dresses! Choose a category on the right and then select an option on the left."
+        instructions_surface = instructions_font.render(instructions, True, WHITE)
         screen.blit(instructions_surface, (WINDOW_SIZE // 2 - instructions_surface.get_width() // 2, WINDOW_SIZE - 50))
 
         pygame.display.flip()
