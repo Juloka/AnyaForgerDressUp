@@ -118,7 +118,8 @@ def update_option_buttons():
             else:
                 button.is_selected = False
 # Create a character preview with clothing items
-
+def draw_character():
+    screen.blit(character_base, (0, 0))
 # Create a the correct colthing order: Shoes, Clothes, Face, Hair
 
 # Create a new surface with the same size as the character
