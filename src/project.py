@@ -104,7 +104,7 @@ class Button:
 category_buttons = {}
 category_button_width = 250
 category_button_height = 100
-category_x = 20
+category_x = WINDOW_SIZE - category_button_width - 20
 category_y_start = WINDOW_SIZE // 4
 for i, category in enumerate(categories.keys()):
     category_buttons[category] = Button(category_x, category_y_start + i * category_button_height, category_button_width, category_button_height, category, GREEN, LIGHT_GREEN)
