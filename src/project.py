@@ -209,6 +209,9 @@ def main():
         for button in option_buttons.values():
             button.draw(screen)
         download_button.draw(screen)
+        font = pygame.font.SysFont(None, 48)
+        title_surface = font.render(f"Select {active_category}", True, BLACK)
+        screen.blit(title_surface, (WINDOW_SIZE - 350, 20))
 
 if __name__ == "main":
     main()
