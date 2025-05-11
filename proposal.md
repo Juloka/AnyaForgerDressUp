@@ -33,7 +33,7 @@ Minimal Viable Outcome:
   2. Goal 2 = Start the coding the program
 
 - Week 2
-  1. Goal 1 = One or all category "bottons" fully work
+  1. Goal 1 = One or all category "buttons" fully work
   2. Goal 2 = Add as much option "buttons" as I can
 
 - Week 3 (Final)
