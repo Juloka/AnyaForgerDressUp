@@ -220,7 +220,7 @@ def main():
         title_surface = font.render(f"Select {active_category}", True, BLACK)
         screen.blit(title_surface, (WINDOW_SIZE - 350, 20))
         instructions_font = pygame.font.SysFont(None, 30)
-        instructions = "Help Anya get dresses! Choose a category on the right and then select an option on the left."
+        instructions = "Help Anya get dressed! Choose a category on the left and then select an option on the right."
         instructions_surface = instructions_font.render(instructions, True, WHITE)
         screen.blit(instructions_surface, (WINDOW_SIZE // 2 - instructions_surface.get_width() // 2, WINDOW_SIZE - 50))
 
