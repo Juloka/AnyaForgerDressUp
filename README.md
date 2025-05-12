@@ -25,6 +25,8 @@ https://www.pygame.org/docs/ref/mouse.html
 
 This page helped me because I learned what pygame.mouse is and how it use it in my game. The examples were also very very helpful in understanding how to implement pygame.mouse in my code.
 
-The last function was the download option in my game window. 
+The last function was the download option in my game window. I already learned how to save an image from my professor, but I want to research how to code a download button. This article from *Ryan Tutorials* really helped me learn how to make buttons that help make the game more interactive.
 
-If I have time, I will also need to research the best way to download an image of the outfit to the computer. This will be researched last.
+https://ryanstutorials.net/pygame-tutorial/pygame-buttons.php
+
+I had a fun time finding clothing and hair ideas for Anya, and drawing/tracing the photos in photoshop. I included the character base photo and background photo in the /src folder. There are four folders with the names "Hair", "Face", "Clothes", and "Shoes" with each folder have four different drawing of those categories. I designed the background the look similar to the Anya's family living room. Overall, I had a fun time programming this simple dress up game. I met every goal that I wanted to achieve and I am very proud of myself. Thank you for checking out my repository and my code. Have a grest rest of your day or night!
