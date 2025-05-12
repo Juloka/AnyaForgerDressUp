@@ -21,8 +21,6 @@ This video was a great visual from the article, because she was actually showing
 
 My second function was the different option buttons appearing when a certain category button was clicked on. 
 
-<h1 align="center">Middle>
-
 I will need to research on how I can make "buttons" in my game. This is the first topic that needs to be researched.
 I will also need to research how to change the options when the player clicks on a specific category. This will be researched second.
 If I have time, I will also need to research the best way to download an image of the outfit to the computer. This will be researched last.
